@@ -3,6 +3,7 @@
 
 const cardsInPlay = [];
 
+//Array of cards with four objects.
 const cards = [
 {
 	rank: "queen",
@@ -37,9 +38,8 @@ function checkForMatch() {
 
 };
 
-
+//iterates through array, pulling image and suit.
 function flipCard() {
-
 
 	var cardID = this.getAttribute('data-id');
 	this.setAttribute('src', cards[cardID].cardImage);
@@ -53,8 +53,11 @@ function flipCard() {
 
 };
 
-
+//Sets up the board game with cards. 
+//Loops through array of 'cards'
+//creats all logic for game.
 function createBoard(){
+
 	for (var i = 0; i < cards.length; i++) {
 	//console.log(i); // testing here
 	var cardElement = document.createElement('img');
@@ -67,4 +70,5 @@ function createBoard(){
 }
 };
 
+//function called for game logic to set up. 
 createBoard();
